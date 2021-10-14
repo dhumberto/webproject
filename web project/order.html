@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="style_order.css"> 
+
+    <title>Pedido</title>
+</head>
+
+<body>
+
+<header>
+    <ul class="menu-navegacao">
+        <li class="menu-item"><a href="index.html">QUEM SOMOS</a></li>
+        <li class="menu-item"><a href="menu.html" target="_blank">MENU</a></li>
+        <li class="menu-item"><a href="p-ou-r.html">PEDIDO OU RESERVA</a></li>
+        <li class="menu-item"><a href="adoption.html" target="_blank">ADOTE</a></li>
+        <li class="menu-item"><a href="index.html#map">LOCALIZAÇÃO</a>
+        <li class="menu-item"><a href="index.html#contato">CONTATO</a></li>
+        <li class="menu-item"><a href="faq.html" target="_blank">FAQ</a></li>
+    </ul> 
+</header>
+
+<div><img src="cool_LS_cafemeow70.png" alt="logo"></div>
+
+<h1>O seu café está a apenas alguns cliques de distância...</h1>
+
+<section class="formularios">
+<form>
+    <label for="fname" class="titulo">Primeiro nome</label>
+    <input type="text" id="fname" placeholder="Ex: Maria" name="fname" class="campo" required>
+    <label for="lname" class="titulo">Sobrenome</label>
+    <input type="text" id="lname" placeholder="Ex: Silva" name="lname" class="campo" required>
+    <label for="email" class="titulo">Endereço de e-mail</label>
+    <input type="email" id="email" placeholder="Insira seu e-mail" name="email" class="campo">
+    <label for="telef" class="titulo">Telefone para contato</label>
+    <input type="text" id="telef" placeholder="Ex: (99) 9 9999-9999" name="lname" class="campo" required>
+    <label for="endereco" class="titulo">Endereço</label>
+    <input type="text" id="endereco" placeholder="Rua dos gatos, 0" name="endereco" class="campo" required>
+    <label for="endereco" class="titulo">Descreva seu Pedido</label>
+    <textarea type="text" id="pedido" placeholder="Ex: 1 Mocha Latte (gelado);" name="pedido" required></textarea>
+
+    <div id="spacement"></div>
+
+    <label class="titulo">Forma de entrega</label>
+    
+    <label for="delivery">
+        <input type="radio" id="delivery" name="forma-consumo" value="Delivery" class="radio" required>
+    Delivery</label>
+    <label for="retirada">
+        <input type="radio" id="retirada" name="forma-consumo" value="Retirada" class="radio">
+    Retirada</label>
+
+    <div id="spacement"></div>
+    
+    <label class="titulo">Forma de pagamento</label>
+
+    <label for="dinheiro" required>
+        <input type="radio" id="dinheiro" name="forma-pag" value="Dinheiro" class="radio">
+    Dinheiro</label>
+    <label for="cartao"><input type="radio" id="cartao" name="forma-pag" value="Cartao" class="radio">
+    Cartão</label><br>
+
+    <input type="submit" id="submit" value="Efetuar pedido">
+    <input type="reset" id="reset" value="Limpar campos">
+
+</form>
+</section>
+
+
+
+</body>
+</html>

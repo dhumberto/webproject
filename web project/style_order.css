@@ -1,0 +1,100 @@
+header{
+
+    background-color: rgba(83, 42, 23, 0.979);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px; 
+    position:relative;
+    width: 100%;
+    display: flex;
+       
+}
+
+.formularios{
+
+    justify-content: center;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: rgba(83, 42, 23, 0.932);
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: 280px;
+    margin-right: 280px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display:flex;
+    
+}
+
+.titulo{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.campo{
+
+    text-align: left;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: -15px;
+
+}
+
+#submit, #reset {
+
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 20px;
+    border-radius: 80px;
+    color: brown;
+    background-color: #fff(245, 245, 245, 0.712);
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+#submit:hover, #reset:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+#spacement{
+    margin-top: 20px;
+}
+
+#pedido {
+
+    text-align: left;
+    padding: 9px;
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: -5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.radio {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h1{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+ 
+}

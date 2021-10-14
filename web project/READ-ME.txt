@@ -1,0 +1,15 @@
+Humberto Danylo Clemente de Araújo - 202103045685
+
+Síntese:
+
+-Site construído para apresentação de um estabelecimento fictício do ramo alimentício, nomeado WHITE CAT CAFÉ, visando a interação do usuário para fins de conhecimento do espaço e para que o mesmo também possa efetuar reservas no local e/ou compras de nossos produtos.
+___________________________________________________
+
+Este é website é o primeiro passo para a imersão em uma experiência inigualável. Na página do WHITE CAT, o usuário terá a oportunidade de conhecer o conceito do nosso negócio (e contribuir com ele).
+
+No site, atualmente, contamos com algumas informações essenciais sobre o estabelecimento, tendo em vista que, por enquanto, possuímos apenas uma estrutura HTML e CSS (em construção) esquematizada por mim mesmo. Acredite, foi um árduo trabalho que exigiu muitas horas de dedicação.
+
+Caso não consiga acesso a algumas páginas de nosso website, culpe nossos gatos, eles derrubaram algumas das páginas em suas brincadeiras. Mas não se preocupe, estamos cuidando de tudo e iremos colocá-las no ar em breve para que você possa ter uma experiência virtual mais completa e assim possamos estabelecer um vínculo.
+
+Tenha uma ótima experiência,
+obrigado!
