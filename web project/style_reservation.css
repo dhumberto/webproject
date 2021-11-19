@@ -1,3 +1,13 @@
+body {
+    background: linear-gradient(rgba(90, 51, 14, 0.438), rgba(0, 0, 0, 0.5) ), url(cat-cafe-pet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    margin:0px;
+    height: 100%;
+}
+
 header{
 
     background-color: rgba(83, 42, 23, 0.979);
@@ -53,7 +63,6 @@ header{
     border-radius: 10px;
     margin-top: -15px;
     
-
 }
 
 .row{
@@ -61,7 +70,6 @@ header{
     text-align: center;
     width: 50%;
     
-
 }
 
 .btngroup{
@@ -119,4 +127,25 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 20px;
  
+}
+
+#alerta{
+
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+
+}
+
+.close{
+
+    border-radius: 30px;
+    border: none;
+background-color: rgb(223, 117, 117);
+}
+
+#hora-cons{
+    border-radius: 20px;
+    padding: 10px;
 }

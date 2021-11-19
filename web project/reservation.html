@@ -1,22 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="error1.css">   
-    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="style_reservation.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="validation2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Faça sua reserva</title>
 </head>
 
 <body>
 
-<div>
-<h1>hm... parece que nossos gatos derrubaram esta página em uma de suas brincadeiras, mas não se preocupe, vamos arrumar tudo!</h1><br>
+<!--Menu de opções-->
+<header class="navbar navbar-expand-md navbar-dark sticky-top"> 
+    
+    <div class="container">
 
-<a href="index.html">Voltar para página principal</a>    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse justify-content-center align-items-center" id="navmenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" aria-current="page">QUEM SOMOS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html" target="_blank">MENU</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarScrollingDropdown" data-bs-toggle="dropdown" aria-expanded="false">DEGUSTE</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="order.html">PEDIR</a></li>
+                        <li><a class="dropdown-item" href="reservation.html">FAZER RESERVA</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="adoption.html" target="_blank">ADOTE</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#map">LOCALIZAÇÃO</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contato">CONTATO</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html" target="_blank">FAQ</a>
+                    </li>
+
+                </ul>   
+            </div>
+        </div>
+</header>
+<!-- Fim menu -->
+
+
+
+<section class="header1">
+<div><img src="cool_LS_cafemeow70.png" alt="logo"></div>
+
+<h1>Nossos bichanos já estão ansiosos por você</h1>
+</section>
+
+<!-- Alerta -->
+<div class="alert alert-light alert-dismissible fade show" role="alert" id="alerta">
+    Devido à pandemia do <a href="https://www.google.com/search?q=coronavirus&oq=coronavirus&aqs=chrome..69i57l2j69i59l2j69i65j69i60l2j69i61.1383j0j7&sourceid=chrome&ie=UTF-8" class="alert-link">coronavírus</a> o uso de máscara no estabelecimento é obrigatório. Pedimos também que caso possua algum dos <a href="https://www.google.com/search?q=sintomas+covid&oq=sintomas+covi&aqs=chrome.0.0i512l4j69i57j0i512l5.1783j0j9&sourceid=chrome&ie=UTF-8" class="alert-link">sintomas</a> do vírus, remarque sua visita. 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
 </div>
-<img src="istockphoto-490288042-612x612.jpg"> 
+
+
+<!--Formulário-->
+<form name="formuser">
+<div class="container1">
+    <div class="row">
+        <div class="offset-3 col-md-6"></div>
+    
+            <label class="titulo">Titular da reserva</label>
+            <input type="text" id="name" placeholder="Ex: Maria Silva" name="name" class="campo">
+            <small id="error-name" ></small>
+
+            <label class="titulo">Endereço de e-mail</label>
+            <input type="email" id="email" placeholder="Insira seu e-mail" name="email" class="campo">
+            <small id="error-email" class="erro"></small>
+
+
+            <label class="titulo">Telefone para contato</label>
+            <input type="text" id="phone" placeholder="Ex: (99) 9 9999-9999" name="phone" class="campo">
+            <small id="error-phone" class="erro"></small>
+
+            <label class="titulo">Quantas pessoas virão com você?</label>
+            <select class="form-select" id="state">
+                <option selected disabled value="">Selecionar quantidade</option>
+                <option>Irei sozinho</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+            </select>
+
+            <div id="spacement"></div>
+
+            <div>
+                <label class="titulo" for="hora-cons">Escolha o horário da visita (aberto das 08:00 às 20:00): </label>
+                <input id="hora-cons" type="time" name="hora-cons"
+                       min="12:00" max="18:00" required>
+                <span class="validacao"></span>
+              </div>
+            
+            <label class="titulo">Antecipe seu Pedido:</label>
+            <textarea type="text" id="pedido" placeholder="Caso deseje antecipar seu pedido, informe-nos o que gostaria que preparássemos" name="pedido"></textarea>
+            <small id="error-pedido" class="erro"></small>
+            
+            <div id="spacement"></div>
+            
+            <label class="titulo">Caso possua alguma alergia, informe no campo abaixo:</label>
+            <textarea type="text" id="pedido" placeholder="Em caso afirmativo, informe-nos sua alergia" name="alergia"></textarea>
+            <small id="error-pedido" class="erro"></small>
+            
+            <div id="spacement"></div>
+
+            <label class="titulo">Forma de pagamento</label>
+
+            <label required>
+                <input type="radio" id="dinheiro" name="forma-pag" value="Dinheiro" class="radio">
+            Dinheiro</label>
+            <label for="cartao"><input type="radio" id="cartao" name="forma-pag" value="Cartao" class="radio">
+            Cartão</label><br>
+
+            <div class="btngroup">
+                <input type="submit" id="submit" value="Efetuar pedido" onclick="return validar()">
+           
+                <input type="reset" id="reset" value="Limpar campos">
+            </div>  
+
+       </div>
+    </div> 
+</div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
-
 </html>

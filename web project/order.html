@@ -7,71 +7,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">   
     <link rel="stylesheet" href="style_order.css"> 
-
-    <title>Pedido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="validation.js"></script>
+    <title>Faça seu pedido</title>
 </head>
 
 <body>
 
-<header>
-    <ul class="menu-navegacao">
-        <li class="menu-item"><a href="index.html">QUEM SOMOS</a></li>
-        <li class="menu-item"><a href="menu.html" target="_blank">MENU</a></li>
-        <li class="menu-item"><a href="p-ou-r.html">PEDIDO OU RESERVA</a></li>
-        <li class="menu-item"><a href="adoption.html" target="_blank">ADOTE</a></li>
-        <li class="menu-item"><a href="index.html#map">LOCALIZAÇÃO</a>
-        <li class="menu-item"><a href="index.html#contato">CONTATO</a></li>
-        <li class="menu-item"><a href="faq.html" target="_blank">FAQ</a></li>
-    </ul> 
+<!--Menu de opções-->
+<header class="navbar navbar-expand-md navbar-dark sticky-top"> 
+    
+    <div class="container">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse justify-content-center align-items-center" id="navmenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" aria-current="page">QUEM SOMOS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html" target="_blank">MENU</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarScrollingDropdown" data-bs-toggle="dropdown" aria-expanded="false">DEGUSTE</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="order.html">PEDIR</a></li>
+                        <li><a class="dropdown-item" href="reservation.html">FAZER RESERVA</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="adoption.html" target="_blank">ADOTE</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#map">LOCALIZAÇÃO</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">CONTATO</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html" target="_blank">FAQ</a>
+                    </li>
+
+                </ul>   
+            </div>
+        </div>
 </header>
 
+<!-- Fim menu -->
+
+<section class="header1">
 <div><img src="cool_LS_cafemeow70.png" alt="logo"></div>
 
 <h1>O seu café está a apenas alguns cliques de distância...</h1>
-
-<section class="formularios">
-<form>
-    <label for="fname" class="titulo">Primeiro nome</label>
-    <input type="text" id="fname" placeholder="Ex: Maria" name="fname" class="campo" required>
-    <label for="lname" class="titulo">Sobrenome</label>
-    <input type="text" id="lname" placeholder="Ex: Silva" name="lname" class="campo" required>
-    <label for="email" class="titulo">Endereço de e-mail</label>
-    <input type="email" id="email" placeholder="Insira seu e-mail" name="email" class="campo">
-    <label for="telef" class="titulo">Telefone para contato</label>
-    <input type="text" id="telef" placeholder="Ex: (99) 9 9999-9999" name="lname" class="campo" required>
-    <label for="endereco" class="titulo">Endereço</label>
-    <input type="text" id="endereco" placeholder="Rua dos gatos, 0" name="endereco" class="campo" required>
-    <label for="endereco" class="titulo">Descreva seu Pedido</label>
-    <textarea type="text" id="pedido" placeholder="Ex: 1 Mocha Latte (gelado);" name="pedido" required></textarea>
-
-    <div id="spacement"></div>
-
-    <label class="titulo">Forma de entrega</label>
-    
-    <label for="delivery">
-        <input type="radio" id="delivery" name="forma-consumo" value="Delivery" class="radio" required>
-    Delivery</label>
-    <label for="retirada">
-        <input type="radio" id="retirada" name="forma-consumo" value="Retirada" class="radio">
-    Retirada</label>
-
-    <div id="spacement"></div>
-    
-    <label class="titulo">Forma de pagamento</label>
-
-    <label for="dinheiro" required>
-        <input type="radio" id="dinheiro" name="forma-pag" value="Dinheiro" class="radio">
-    Dinheiro</label>
-    <label for="cartao"><input type="radio" id="cartao" name="forma-pag" value="Cartao" class="radio">
-    Cartão</label><br>
-
-    <input type="submit" id="submit" value="Efetuar pedido">
-    <input type="reset" id="reset" value="Limpar campos">
-
-</form>
 </section>
 
+<!--Formulário-->
+<form name="formuser">
+<div class="container1">
+    <div class="row">
+        <div class="offset-3 col-md-6"></div>
+    
+            <label class="titulo">Nome e sobrenome</label>
+            <input type="text" id="name" placeholder="Ex: Maria Silva" name="name" class="campo">
+            <small id="error-name" ></small>
+
+            <label class="titulo">Endereço de e-mail</label>
+            <input type="email" id="email" placeholder="Insira seu e-mail" name="email" class="campo">
+            <small id="error-email" class="erro"></small>
 
 
+            <label class="titulo">Telefone para contato</label>
+            <input type="text" id="phone" placeholder="Ex: (99) 9 9999-9999" name="phone" class="campo">
+            <small id="error-phone" class="erro"></small>
+
+            <label class="titulo">Endereço</label>
+            <input type="text" id="endereco" placeholder="Rua dos gatos, 0" name="endereco" name="endereco" class="campo">
+            <small id="error-endereco" class="erro"></small>
+
+            <label class="titulo">Descreva seu Pedido</label>
+            <textarea type="text" id="pedido" placeholder="Ex: 1 Mocha Latte (gelado);" name="pedido"></textarea>
+            <small id="error-pedido" class="erro"></small>
+            
+            <div id="spacement"></div>
+
+            <label class="titulo">Como deseja receber seu pedido?</label>
+            
+            <label required>
+                <input type="radio" id="delivery" name="forma-consumo" value="Delivery" class="radio">
+            Delivery</label> 
+            <label>
+                <input type="radio" id="retirada" name="forma-consumo" value="Retirada" class="radio">
+            Retirada</label>
+
+            <div id="spacement"></div>
+            
+            <label class="titulo">Forma de pagamento</label>
+
+            <label required>
+                <input type="radio" id="dinheiro" name="forma-pag" value="Dinheiro" class="radio">
+            Dinheiro</label>
+            <label for="cartao"><input type="radio" id="cartao" name="forma-pag" value="Cartao" class="radio">
+            Cartão</label><br>
+            
+            <div class="btngroup">
+                    <input type="submit" id="submit" value="Efetuar pedido" onclick="return validar()">
+               
+                    <input type="reset" id="reset" value="Limpar campos">
+            </div>
+
+       </div>
+    </div> 
+</div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
